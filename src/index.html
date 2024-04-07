@@ -3,20 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/Images/logo blanc sur bleu.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
     <title>FlyApp</title>
 </head>
-<body>
-  <nav class="h-5 p-4 bg-black flex items-center justify-between sticky top-0 z-10 shadow">
-    <div>
+<body class="bg-blue-900">
+
+  <!-- Barre de navigation -->
+  <nav class="h-50 p-4 bg-white md:flex md:items-center md:justify-between sticky top-0 z-10 shadow">
+    <div class="flex justify-between items-center">
       <span>
-        <img class="h-8 inline" src="/Images/4.png" alt="">
+        <img class="h-10 inline" src="/Images/logo bleu sur blanc.png" alt="" class="h-20">
+      </span>
+      <span class="text-3x1 cursor-pointer mx-2 md:hidden block"><ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
       </span>
     </div>
+    <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-gray-400 w-full
+    left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+      <li class="mx-4 my-6 md:my-0">
+        <a href="" class="text-x1 hover:text-blue-500 duration-500">Accueil</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="" class="text-x1 hover:text-blue-500 duration-500">Se connecter</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="" class="text-x1 hover:text-blue-500 duration-500"><ion-icon name="notifications-outline"></ion-icon></a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="" class="text-x1 hover:text-blue-500 duration-500">Contact</a>
+      </li>
+    </ul>
   </nav>
-  <h1 class="text-red-100">Bienvenue</h1>  
+  
+  <!-- Première section avec les images en carrousel -->
+  <main class="relative py-56">
 
+    <div class="absolute inset-0 bg-opacity-100 bg-black">
+      <img class="w-full h-full object-cover" src="/Images/what-beautiful-landscape-happy-excited-afro-american-backpacker-using-paper-map-while-standing-viewing-point-high-blue-sea-studying-surroundings-his-trip-travel-adventure.jpg" class="w-full h-full object-cover" alt="Image 1">
+      <div class="absolute inset-0 flex items-center justify-center">
+        <p class="text-white text-2xl">Avec BFly volez en toute simplité!</p>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-opacity-50 bg-black hidden">
+      <img src="image2.jpg" class="w-full h-full object-cover" alt="Image 2">
+      <div class="absolute inset-0 flex items-center justify-center">
+        <p class="text-white text-2xl">Text 2</p>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-opacity-50 bg-black hidden">
+      <img src="image3.jpg" class="w-full h-full object-cover" alt="Image 3">
+      <div class="absolute inset-0 flex items-center justify-center">
+        <p class="text-white text-2xl">Text 3</p>
+      </div>
+    </div>
+  </main>
+
+    <!-- Formulaire pour rentrer les informations du voyage -->
+    <h1 class="mt-10 block text-white lg:mr-1 text-lg font-bold">Vols</h1>
+
+    <form class="flex flex-col lg:flex-row lg:items-end">
+      <div class="flex flex-col lg:items-end mr-1">
+        <label for="username" class="block text-zinc-50 lg:mr-1">De</label>
+        <input type="text" id="username" name="username" class="border border-gray-300 lg:py-4 rounded-md" placeholder="Pays ou ville">
+      </div>
+
+      <div class="flex flex-col lg:items-end mr-1">
+        <label for="password" class="block text-zinc-50 lg:mr-1">Vers</label>
+        <input type="text" id="password" name="password" class="border border-gray-300 px-2 py-2 lg:py-4 rounded-md" placeholder="Pays ou ville">
+      </div>
+
+      <div class="flex flex-col lg:items-end mr-1">
+        <label for="password" class="block text-zinc-50 lg:mr-1">Départ</label>
+        <input type="date" id="password" name="password" class="border border-gray-300 px-2 py-2 lg:py-4 rounded-md" placeholder="Date de départ">
+      </div>
+
+      <div class="flex flex-col lg:items-end mr-1">
+        <label for="password" class="block text-zinc-50 lg:mr-1">Retour</label>
+        <input type="date" id="password" name="password" class="border border-gray-300 px-2 py-2 lg:py-4 rounded-md" placeholder="Date de retour">
+      </div>
+
+      <div class="flex flex-col lg:items-end mr-1">
+        <label for="password" class="block text-zinc-50 lg:mr-1">Nombre d'adultes Eco</label>
+        <input type="number" id="password" name="password" class="border border-gray-300 px-2 py-2 lg:py-4 rounded-md" placeholder="Nombre d'adultes">
+      </div>
+
+      <div class="flex flex-col lg:items-end mr-4">
+        <label for="password" class="block text-zinc-50 lg:mr-1">Nombre d'enfants Eco</label>
+        <input type="number" id="password" name="password" class="border border-gray-300 px-2 py-2 lg:py-4 rounded-md" placeholder="Nombre d'enfants">
+      </div>
+
+      <!-- <div class="flex flex-col lg:items-end mr-4">
+        <label for="password" class="block text-zinc-50 lg:mr-1">Catégorie</label>
+        <select name="voyageur" id="voyageur" class="border border-gray-300 px-2 py-2 lg:py-4 rounded-md">
+            <option value="adulte">Classe Economique</option>
+            <option value="enfant">Classe Affaires</option>
+        </select>
+      </div> -->
+
+      <!-- <div class="relative">
+        <label for="nombrePersonnes" class="block text-zinc-50 lg:mr-1">Nombre de personnes</label>
+        <div class="flex flex-col lg:flex-row lg:items-end space-y-4 lg:space-x-4">
+          <div class="flex flex-col items-center">
+            <label for="adulte" class="block text-zinc-50 lg:mr-1">Adultes</label>
+            <div class="flex items-center">
+              <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded-l-md" onclick="decrement('adulte')">-</button>
+              <input type="number" id="adulte" name="adulte" class="border border-gray-300 px-2 py-1 lg:py-4 rounded-none" value="1">
+              <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded-r-md" onclick="increment('adulte')">+</button>
+            </div>
+            <span class="text-sm text-gray-500">De 16 ans et plus</span>
+          </div>
+      
+          <div class="flex flex-col items-center">
+            <label for="enfant" class="block text-zinc-50 lg:mr-1">Enfants</label>
+            <div class="flex items-center">
+              <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded-l-md" onclick="decrement('enfant')">-</button>
+              <input type="number" id="enfant" name="enfant" class="border border-gray-300 px-2 py-1 lg:py-4 rounded-none" value="0">
+              <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded-r-md" onclick="increment('enfant')">+</button>
+            </div>
+            <span class="text-sm text-gray-500">De 0 à 15 ans</span>
+          </div>
+        </div>
+      </div>
+       -->
+
+      <button type="submit" class="bg-blue-500 text-white px-3 py-2 lg:px-4 lg:py-2 rounded-md mt-2 lg:mt-0">Rechercher</button>
+    </form>
+
+    <!-- FAQ -->
+    <h1 class="mt-10 block text-white lg:mr-1 text-lg font-bold">Comment réserver vos vols avec BFly</h1>
+    <div class="container mx-auto px-4 py-8">
+      <div class="flex flex-wrap justify-between ">
+        <!-- Questions à gauche -->
+        <div class="w-full lg:w-1/2 mb-4 lg:mb-0">
+          <div class="bg-gray-100 rounded-md px-4 py-2 mb-2 mr-10 flex justify-between items-center cursor-pointer">
+            <p class="text-lg font-semibold">Question 1</p>
+            <ion-icon name="chevron-down-outline" onclick="toggleAnswer(this)" class="text-gray-500"></ion-icon>
+          </div>
+          <p class="bg-gray-200 rounded-md px-4 py-2 mb-2 mr-10 hidden">Réponse à la question 1</p>
+          <div class="bg-gray-100 rounded-md px-4 py-2 mb-2 mr-10 flex justify-between items-center cursor-pointer">
+            <p class="text-lg font-semibold">Question 2</p>
+            <ion-icon name="chevron-down-outline" onclick="toggleAnswer(this)" class="text-gray-500"></ion-icon>
+          </div>
+          <p class="bg-gray-200 rounded-md px-4 py-2 mb-2 mr-10 hidden">Réponse à la question 2</p>
+          <div class="bg-gray-100 rounded-md px-4 py-2 mb-2 mr-10 flex justify-between items-center cursor-pointer">
+            <p class="text-lg font-semibold">Question 3</p>
+            <ion-icon name="chevron-down-outline" onclick="toggleAnswer(this)" class="text-gray-500"></ion-icon>
+          </div>
+          <p class="bg-gray-200 rounded-md px-4 py-2 mb-2 mr-10 hidden">Réponse à la question 3</p>
+          <div class="bg-gray-100 rounded-md px-4 py-2 mb-2 mr-10 flex justify-between items-center cursor-pointer">
+            <p class="text-lg font-semibold">Question 4</p>
+            <ion-icon name="chevron-down-outline" onclick="toggleAnswer(this)" class="text-gray-500"></ion-icon>
+          </div>
+          <p class="bg-gray-200 rounded-md px-4 py-2 mb-2 mr-10 hidden">Réponse à la question 4</p>
+          <div class="bg-gray-100 rounded-md px-4 py-2 mb-2 mr-10 flex justify-between items-center cursor-pointer">
+            <p class="text-lg font-semibold">Question 5</p>
+            <ion-icon name="chevron-down-outline" onclick="toggleAnswer(this)" class="text-gray-500"></ion-icon>
+          </div>
+          <p class="bg-gray-200 rounded-md px-4 py-2 mb-2 mr-10 hidden">Réponse à la question 5</p>
+        </div>
+        
+        <!-- Questions à droite -->
+        <div class="w-full lg:w-1/2">
+          <div class="bg-gray-100 rounded-md px-4 py-2 mb-2 flex justify-between items-center cursor-pointer">
+            <p class="text-lg font-semibold">Question 6</p>
+            <ion-icon name="chevron-down-outline" onclick="toggleAnswer(this)" class="text-gray-500"></ion-icon>
+          </div>
+          <p class="bg-gray-200 rounded-md px-4 py-2 mb-2 hidden">Réponse à la question 6</p>
+          <div class="bg-gray-100 rounded-md px-4 py-2 mb-2 flex justify-between items-center cursor-pointer">
+            <p class="text-lg font-semibold">Question 7</p>
+            <ion-icon name="chevron-down-outline" onclick="toggleAnswer(this)" class="text-gray-500"></ion-icon>
+          </div>
+          <p class="bg-gray-200 rounded-md px-4 py-2 mb-2 hidden">Réponse à la question 7</p>
+          <div class="bg-gray-100 rounded-md px-4 py-2 mb-2 flex justify-between items-center cursor-pointer">
+            <p class="text-lg font-semibold">Question 8</p>
+            <ion-icon name="chevron-down-outline" onclick="toggleAnswer(this)" class="text-gray-500"></ion-icon>
+          </div>
+          <p class="bg-gray-200 rounded-md px-4 py-2 mb-2 hidden">Réponse à la question 8</p>
+          <div class="bg-gray-100 rounded-md px-4 py-2 mb-2 flex justify-between items-center cursor-pointer">
+            <p class="text-lg font-semibold">Question 9</p>
+            <ion-icon name="chevron-down-outline" onclick="toggleAnswer(this)" class="text-gray-500"></ion-icon>
+          </div>
+          <p class="bg-gray-200 rounded-md px-4 py-2 mb-2 hidden">Réponse à la question 9</p>
+          <div class="bg-gray-100 rounded-md px-4 py-2 mb-2 flex justify-between items-center cursor-pointer">
+            <p class="text-lg font-semibold">Question 10</p>
+            <ion-icon name="chevron-down-outline" onclick="toggleAnswer(this)" class="text-gray-500"></ion-icon>
+          </div>
+          <p class="bg-gray-200 rounded-md px-4 py-2 mb-2 hidden">Réponse à la question 10</p>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      function toggleAnswer(icon) {
+        var answer = icon.parentElement.nextElementSibling;
+        answer.classList.toggle('hidden');
+      }
+    </script>
+
+  <!-- Footer -->
+  <footer class="bg-white text-blue-900 py-6">
+    <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center px-4">
+      <!-- Logo -->
+      <div class="mb-4 lg:mb-0">
+        <img src="/Images/logo blanc sur bleu.png" alt="Logo" class="h-12">
+      </div>
+      
+      <!-- Liens importants -->
+      <div class="flex flex-col lg:flex-col space-y-2 lg:space-y-0 lg:space-x-4">
+        <a href="#" class="hover:text-blue-500"></a>
+        <a href="#" class="hover:text-blue-500">Produits</a>
+        <a href="#" class="hover:text-blue-500">Services</a>
+        <a href="#" class="hover:text-blue-500">Contact</a>
+      </div>
+      
+      <!-- Copyright -->
+      <div>
+        <p class="text-sm">&copy; 2024 <span>B</span><span class="text-blue-500">Fly</span>. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <footer class="bg-white text-blue-900 py-6">
+    <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center px-4">
+      <!-- Logo -->
+      <div class="mb-4 lg:mb-0">
+        <img src="/Images/logo blanc sur bleu.png" alt="Logo" class="h-12">
+      </div>
+      
+      <!-- Liens importants -->
+      <div class="flex flex-col space-y-2 lg:space-y-0 lg:space-x-4">
+        <a href="#" class="hover:text-blue-500"></a>
+        <a href="#" class="hover:text-blue-500">Produits</a>
+        <a href="#" class="hover:text-blue-500">Services</a>
+        <a href="#" class="hover:text-blue-500">Contact</a>
+      </div>
+      
+      <!-- Contacts et réseaux sociaux -->
+      <div class="flex items-center">
+        <!-- Icônes des réseaux sociaux et Contacts  -->
+        <div class="ml-4">
+          <p class="text-sm">Email : berniemathieu99@gmail.com</p>
+          <p class="text-sm">Téléphone : +241 77795961</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-blue-900 hover:text-blue-500"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#" class="text-blue-900 hover:text-blue-500"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#" class="text-blue-900 hover:text-blue-500"><ion-icon name="logo-github"></ion-icon></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="text-center mt-4">
+      <p class="text-sm">&copy; 2024 <span>B</span><span class="text-blue-500">Fly</span>. Tous droits réservés.</p>
+    </div>
+  </footer>
+  
+  
+    
+  
+      
 </body>
 </html>
